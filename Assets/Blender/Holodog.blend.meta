@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 2a3bc02aaac31534d97856419399070a
+timeCreated: 1505985707
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Armature_Main
+    100002: Body
+    100004: Brust
+    100006: Empty
+    100008: Empty_002
+    100010: fu__hinten_l
+    100012: fu__hinten_r
+    100014: fu__vorne_l
+    100016: fu__vorne_r
+    100018: Hals_oben
+    100020: Hals_unten
+    100022: //RootNode
+    100024: Kopf
+    100026: Midlle
+    100028: Oberschenkel_Hinten_l
+    100030: Oberschenkel_Hinten_r
+    100032: Oberschenkel_vorne_l
+    100034: Oberschenkel_vorne_r
+    100036: Plane
+    100038: Plane_001
+    100040: Rear
+    100042: Schulter_hinten_l
+    100044: Schulter_hinten_r
+    100046: Schulter_vorne_l
+    100048: Schulter_vorne_r
+    100050: Schwanz_1
+    100052: Schwanz_1_Controll
+    100054: Schwanz_1_Controll_IK
+    100056: Schwanz_2
+    100058: Schwanz_2_Controll
+    100060: Schwanz_2_Controll_IK
+    100062: Schwanz_3
+    100064: Schwanz_3_Controll
+    100066: Schwanz_3_Controll_IK
+    100068: Schwanz_Controll
+    100070: Unterschenkel_hinten_l
+    100072: Unterschenkel_hinten_r
+    100074: Unterschenkel_vorne_l
+    100076: Unterschenkel_vorne_r
+    400000: Armature_Main
+    400002: Body
+    400004: Brust
+    400006: Empty
+    400008: Empty_002
+    400010: fu__hinten_l
+    400012: fu__hinten_r
+    400014: fu__vorne_l
+    400016: fu__vorne_r
+    400018: Hals_oben
+    400020: Hals_unten
+    400022: //RootNode
+    400024: Kopf
+    400026: Midlle
+    400028: Oberschenkel_Hinten_l
+    400030: Oberschenkel_Hinten_r
+    400032: Oberschenkel_vorne_l
+    400034: Oberschenkel_vorne_r
+    400036: Plane
+    400038: Plane_001
+    400040: Rear
+    400042: Schulter_hinten_l
+    400044: Schulter_hinten_r
+    400046: Schulter_vorne_l
+    400048: Schulter_vorne_r
+    400050: Schwanz_1
+    400052: Schwanz_1_Controll
+    400054: Schwanz_1_Controll_IK
+    400056: Schwanz_2
+    400058: Schwanz_2_Controll
+    400060: Schwanz_2_Controll_IK
+    400062: Schwanz_3
+    400064: Schwanz_3_Controll
+    400066: Schwanz_3_Controll_IK
+    400068: Schwanz_Controll
+    400070: Unterschenkel_hinten_l
+    400072: Unterschenkel_hinten_r
+    400074: Unterschenkel_vorne_l
+    400076: Unterschenkel_vorne_r
+    2300000: Plane
+    3300000: Plane
+    4300000: Plane
+    4300002: Plane_001
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: Plane_001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
