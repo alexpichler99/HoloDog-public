@@ -6,15 +6,14 @@ using HoloToolkit.Unity.SpatialMapping;
 
 public class HoloDog : MonoBehaviour
 {
+    //The dog is from: https://3dhaupt.com/3d-wolf-rigged-low-poly-and-game-ready-download-walk-cycle-run-sit-creep-idle-animation/
+    //Author 3dhaupt
     static float lastXPos;
     static float lastYPos;
     static float lastZPos;
     static Animator anim;
     public int cntWalkingAway = 0;              //distance for walking away
-    //private int cntComeOn=0;
-    //private int cnt2;
-    //private int cnt3;
-    //private int cnt4;
+    
     AudioSource[] audio;
     Renderer renderer;
     private bool stop = false;             //when stop == true -> dog stops
@@ -43,13 +42,15 @@ public class HoloDog : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
-        //Debug.Log("probabbility"+probability);
+        
         //starts that the dog does on the ground and dosen't stand in the air (why in update?, because there is no function where you get iformend when the spatial processing is finished.)
         StartPhysics();
         //checks if the person Comes near without stooping  -> next time with specific speed
         CheckIfPersonIsNear();
+
         if (PersIsStooping() && !personWasStooping)
         {
             probability += UnityEngine.Random.Range(15, 32);
@@ -70,10 +71,12 @@ public class HoloDog : MonoBehaviour
             cntWalkingAway++;
             WalkAway();
         }
-        else if (cntWalkingAway == 30)
+        else if (cntWalkingAway >= 30&&!stop)
         {
+            anim.SetBool("isWalking", false);
             personWasStooping = false;
             actspeed = -1;
+            stop = true;
         }
         else if (!cameOn && camIsNear && growlingCnt <= 1)
         {
@@ -93,6 +96,7 @@ public class HoloDog : MonoBehaviour
             cntWalkingAway = 0;
         }
     }
+
     /// <summary>
     /// To start the Physics
     /// </summary>
@@ -217,19 +221,39 @@ public class HoloDog : MonoBehaviour
     /// <returns></returns>
     public void CheckActSpeed()
     {
+
         float xPose = Camera.main.transform.position.x;
         float zPose = Camera.main.transform.position.z;
-        StartCoroutine(Wait(1));
+        StartCoroutine(Wait(3));
         float xPose2 = Camera.main.transform.position.x;
         float zPose2 = Camera.main.transform.position.z;
+        if (xPose < 0)
+            xPose *= -1;
+        if (xPose2 < 0)
+            xPose2 *= -1;
+        if (zPose < 0)
+            zPose *= -1;
+        if (zPose2 < 0)
+            zPose2 *= -1;
 
-        double xWay = Math.Abs(xPose - xPose2);
-        double zWay = Math.Abs(zPose - zPose2);
+        double xWay = 0;
+        double zWay = 0;
+        if (xPose < xPose2)
+            xWay = (Double)(xPose2 - xPose);
+        else
+            xWay = (Double)(xPose - xPose2);
 
-        double way = Math.Pow(xWay, 2) + Math.Pow(zWay, 2); ;
+        if (zPose < zPose2)
+            zWay = (Double)(zPose2 - zPose);
+        else
+            zWay = (Double)(zPose - zPose2);
+
+        double value = Math.Pow(xWay, 2) + Math.Pow(zWay, 2); ;
         double s = 0;
-        s = Math.Sqrt(way);
-        double v = s / 1;
+
+        s = Math.Sqrt(value);
+
+        double v = s / 3;
         if (v != actspeed && v <= 6)
         {
             actspeed = v;
@@ -240,8 +264,11 @@ public class HoloDog : MonoBehaviour
             actspeed = v;
             probWalkAway = UnityEngine.Random.RandomRange(80, 120);
         }
+        //}
         //else if (probability >= 20)
+        //{
         //    probability -= 10;
+        //}
     }
 
     /// <summary>
